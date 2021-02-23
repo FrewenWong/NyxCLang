@@ -25,3 +25,8 @@ add_executable(HelloClangPointer5 pointer/05_demo_pointer_new_delete.cpp)
 # 学习函数的相关运行程序的相关的代码逻辑
 add_executable(HelloClangFunction1 function/01_demo_function_pointer.cpp)
 
+
+
+# 学习面向对象的类的相关代码
+add_executable(HelloObjectOriented object-oriented/01_demo_object_oriented.cpp)
+
