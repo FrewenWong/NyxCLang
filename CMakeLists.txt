@@ -10,24 +10,25 @@ add_executable(NyxCLang main.cpp)
 
 
 # 学习数组的相关的代码逻辑
-add_executable(HelloClang2 array/hello_array.cpp)
+add_executable(HelloClang2 basic/array/hello_array.cpp)
 
 
 # 学习指针的相关运行程序的相关的代码逻辑
-add_executable(HelloClangPointer1 pointer/01_demo_pointer.cpp)
-add_executable(HelloClangPointer2 pointer/02_demo_pointer_nullpt.cpp)
-add_executable(HelloClangPointer3 pointer/03_demo_pointer.cpp)
-add_executable(HelloClangPointer4 pointer/04_demo_pointer_array.cpp)
-add_executable(HelloClangPointer5 pointer/05_demo_pointer_new_delete.cpp)
+add_executable(HelloClangPointer1 basic/pointer/01_demo_pointer.cpp)
+add_executable(HelloClangPointer2 basic/pointer/02_demo_pointer_nullpt.cpp)
+add_executable(HelloClangPointer3 basic/pointer/03_demo_pointer.cpp)
+add_executable(HelloClangPointer4 basic/pointer/04_demo_pointer_array.cpp)
+add_executable(HelloClangPointer5 basic/pointer/05_demo_pointer_new_delete.cpp)
 
 
 # 学习函数的相关运行程序的相关的代码逻辑
-add_executable(HelloClangFunction1 function/01_demo_function_pointer.cpp)
+add_executable(HelloClangFunction1 basic/function/01_demo_function_pointer.cpp)
 
 
 # 学习面向对象的类的相关代码
 add_executable(HelloObjectOriented1 object-oriented/01_demo_object_oriented.cpp)
 add_executable(HelloObjectOriented2 object-oriented/15_function_obj_transform.cpp)
+add_executable(HelloObjectOriented basic/object-oriented/01_demo_object_oriented.cpp)
 
 
 # 学习C++的标准库函数

@@ -1,0 +1,3 @@
+// the configured options and settings for Tutorial
+#define Vision_Service_VERSION_MAJOR @Vision_Service_VERSION_MAJOR@
+#define Vision_Service_VERSION_MINOR @Vision_Service_VERSION_MINOR@
