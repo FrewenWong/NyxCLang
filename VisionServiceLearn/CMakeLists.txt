@@ -56,8 +56,31 @@ endif ()
 message(STATUS "SYS_TAG = ${SYS_TAG}")
 message(STATUS "SYS_ARCH = ${SYS_ARCH}")
 
-macro(collect_source_files)
+# TODO 学习macro的语法的知识点
+macro(collect_source_files srcs)
+    # cmake_parse_arguments 为解析函数（function）或 宏（macros） 参数的命令；
+    # cmake_parse_arguments(<prefix> <options> <one_value_keywords> <multi_value_keywords> <args>...)
+    # <prefix>前缀, 解析出的参数都会按照 prefix_参数名 的形式形成新的变量;
+    # <options>: 可选值
+    # 此处包含可选项的变量名称, 对应的值为 TRUE 或 FALSE;
+    # 如果传递进来的参数包含此变量,则为 TRUE 反之为 FALSE
+    # <one_value_keywords>: 单值关键词列表  每个关键词仅仅对应一个值
+    # <multi_value_keywords>: 多值关键词列表  每个关键词可对应多个值
+    # <args>... 参数, 一般传入 ${ARGN} 即可
     cmake_parse_arguments(MODULE "" "" "GLOB;GLOB_RECURSE" ${ARGN})
+    if (MODULE)
+        file(GLOB files LIST_DIRECTORIES FALSE
+                ${SRC_ROOT}/${MODULE_GLOB}/*.c
+                ${SRC_ROOT}/${MODULE_GLOB}/*.cpp)
+        list(APPEND ${srcs} ${files})
+    endif ()
+    if (MODULE_GLOB_RECURSE)
+        file(GLOB_RECURSE files LIST_DIRECTORIES FALSE
+                ${SRC_ROOT}/${MODULE_GLOB_RECURSE}/*.c
+                ${SRC_ROOT}/${MODULE_GLOB_RECURSE}/*.cc
+                ${SRC_ROOT}/${MODULE_GLOB_RECURSE}/*.cpp)
+        list(APPEND ${srcs} ${files})
+    endif ()
 endmacro()
 
 
