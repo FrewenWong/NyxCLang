@@ -39,13 +39,16 @@ if (OPEN_LOG)
 endif ()
 
 # 如果没有定义VISION_TARGET_OS这个变量，那么设置默认的SYS_TAG为osx
+# 否则就按照编译脚本传入的参数类设置
 if (NOT DEFINED VISION_TARGET_OS)
     set(SYS_TAG osx)
 else ()
     # 如果设置了的话，则就按照设置的系统类型
     set(SYS_TAG ${VISION_TARGET_OS})
 endif ()
+
 # 如果没有设置编译架构这个参数，那么默认设置为x86_64位架构
+# 否则就按照编译脚本传入的参数类设置
 if (NOT DEFINED VISION_TARGET_ARCH)
     set(SYS_ARCH x86_64)
 else ()
@@ -84,8 +87,14 @@ macro(collect_source_files srcs)
 endmacro()
 
 
+message(STATUS "ANDROID_ABI ==== ${ANDROID_ABI}")
+message(STATUS "VISION_OSX ==== ${VISION_OSX}")
+
 #这个是必须的：这个是一个编译工程必备的。
-#add_executable(Tutorial main.cpp) #我们先注释掉这个测试Demo。然后我们加载子目录
+#我们先注释掉这个测试Demo。然后我们加载子目录
+#add_executable(Tutorial main.cpp)
+
+
 add_subdirectory(vision-service)
 # 如果是构建一个App的话，那我们就vision-app的目录也添加进去
 if (BUILD_APP)

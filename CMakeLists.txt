@@ -26,9 +26,8 @@ add_executable(HelloClangFunction1 basic/function/01_demo_function_pointer.cpp)
 
 
 # 学习面向对象的类的相关代码
-add_executable(HelloObjectOriented1 object-oriented/01_demo_object_oriented.cpp)
-add_executable(HelloObjectOriented2 object-oriented/15_function_obj_transform.cpp)
-add_executable(HelloObjectOriented basic/object-oriented/01_demo_object_oriented.cpp)
+add_executable(HelloObjectOriented1 basic/object-oriented/01_demo_object_oriented.cpp)
+add_executable(HelloObjectOriented2 basic/object-oriented/15_function_obj_transform.cpp)
 
 
 # 学习C++的标准库函数

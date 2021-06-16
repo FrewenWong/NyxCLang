@@ -1,9 +1,6 @@
-//
-// Created by wangzhijiang on 2021/4/6.
-//
 
 #include "log_utils.h"
-
+#include <cstring>
 
 namespace vision_app {
 

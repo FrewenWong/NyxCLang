@@ -1,6 +1,3 @@
-//
-// Created by wangzhijiang on 2021/4/6.
-//
 
 // 文章参考：https://blog.csdn.net/liitdar/article/details/80055236
 // 在头文件中，我们经常会在头文件中见到#ifndef、#define、#endif三者一起使用的宏定义。
@@ -8,11 +5,10 @@
 #ifndef VISION_SERVICE_LOG_UTILS_H
 #define VISION_SERVICE_LOG_UTILS_H
 
+#include <string>
 /**
  * 定义命名空间
  */
-#include <string>
-
 namespace vision_app {
 
     class LogUtils {

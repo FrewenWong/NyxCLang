@@ -1,12 +1,16 @@
 
-message(STATUS "=============开始编译VisionApp==================")
+message(STATUS "=============开始编译VisionApp的Demo程序==================")
 
 #
 option(BUILD_TOOLS "build tools" OFF)
+
 # 设置VisionApp的名字
 set(VISION_APP_NAME vision_app)
-# 设置VisionApp的代码目录 ./vision-app/src
+
+# 设置VisionApp的代码目录为当前CMake文件目录 ./vision-app/src
 set(SRC_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/src)
+# 设置VisionService工程依赖的目录。为当前Cmake文件目录下面的src目录
+set(VISION_SERVICE_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/vision-service/src)
 
 # 设置camera模块的文件目录
 # collect_source_files的方法是在最外部定义一个的一个宏（macros）
