@@ -10,15 +10,16 @@ add_executable(NyxCLang main.cpp)
 
 
 # 学习数组的相关的代码逻辑
+add_executable(HelloClang1 basic/data-type/demo_size_of.cpp)
 add_executable(HelloClang2 basic/array/hello_array.cpp)
 
 
 # 学习指针的相关运行程序的相关的代码逻辑
 add_executable(HelloClangPointer1 basic/pointer/01_demo_pointer.cpp)
-add_executable(HelloClangPointer2 basic/pointer/02_demo_pointer_nullpt.cpp)
-add_executable(HelloClangPointer3 basic/pointer/03_demo_pointer.cpp)
-add_executable(HelloClangPointer4 basic/pointer/04_demo_pointer_array.cpp)
-add_executable(HelloClangPointer5 basic/pointer/05_demo_pointer_new_delete.cpp)
+add_executable(HelloClangPointer2 basic/pointer/01_demo_pointer-of-function.cpp basic/pointer/03_demo_pointer_operator.cpp)
+add_executable(HelloClangPointer3 basic/pointer/02_demo_pointer_nullpt.cpp)
+add_executable(HelloClangPointer5 basic/pointer/04_demo_pointer_array.cpp)
+add_executable(HelloClangPointer6 basic/pointer/05_demo_pointer_new_delete.cpp)
 
 
 # 学习函数的相关运行程序的相关的代码逻辑
