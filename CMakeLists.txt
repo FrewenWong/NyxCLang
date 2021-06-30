@@ -33,3 +33,12 @@ add_executable(HelloObjectOriented2 basic/object-oriented/15_function_obj_transf
 
 # 学习C++的标准库函数
 add_executable(HelloCStdio stdio/01_demo_getenv.cpp)
+# 学习C++的标准库函数
+add_executable(HelloCStdio2 basic/name-space/01_demo_name_space.cpp)
+
+# 学习C++其他的一些基础Demo
+add_executable(HelloCLangOther basic/other/01_demo_explicit.cpp)
+
+
+# 学习C++关于文档操作的File相关的Demo
+add_executable(HelloCLangFile basic/file/01_demo_file.cpp)

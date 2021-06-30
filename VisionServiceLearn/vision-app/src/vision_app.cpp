@@ -18,10 +18,11 @@ using namespace vision_app;
 int main(int argc, char **argv) {
 
     // 日志打印的方法
-    printf("=====Hello VisionApp=========\n");
-    // fprintf(stdout, "=====Hello VisionApp=========");
     // https://blog.csdn.net/u011675745/article/details/51939108
-    // std::cout << "=====Hello VisionApp=========" << std::endl;
+    printf("=====Hello VisionApp with printf=========\n");
+    fprintf(stdout, "=====Hello VisionApp with fprintf=========\n");
+    std::cout << "=====Hello VisionApp with std::cout=========\n" << std::endl;
+
     LogUtils::configLog();
 
     // 进行Main函数的参数处理

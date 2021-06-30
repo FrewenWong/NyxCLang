@@ -179,7 +179,7 @@ fi
 make -j 4
 echo "make finished!"
 
-#make install
-#echo "install finished!"
-#cd -
-#exit 0
+make install
+echo "install finished!"
+cd -
+exit 0
