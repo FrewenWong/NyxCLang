@@ -31,6 +31,9 @@ add_executable(HelloObjectOriented1 basic/object-oriented/01_demo_object_oriente
 add_executable(HelloObjectOriented2 basic/object-oriented/15_function_obj_transform.cpp)
 
 
+# 学习C++数据结构相关
+add_executable(HelloCLangDataStructure basic/data-structure/01_demo_map.cpp)
+
 # 学习C++的标准库函数
 add_executable(HelloCStdio stdio/01_demo_getenv.cpp)
 # 学习C++的标准库函数

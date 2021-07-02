@@ -17,7 +17,7 @@ set(CMAKE_INSTALL_PREFIX ${PROJECT_BINARY_DIR}/install) # 编译产出的安装�
 
 # 配置我们进行编译时候的配置开关
 option(BUILD_APP "build vision_app" ON) # 是否编译 app。默认我们暂时开启
-option(BUILD_UNIT_TEST "build unit test" OFF) # 是否编译单元测试程序，默认打开
+option(BUILD_UNIT_TEST "build unit test" ON) # 是否编译单元测试程序，默认打开
 option(BUILD_MOCK_INTERFACE "build mock interface lib" OFF) # 是否编译模拟接口
 option(OPEN_LOG "open log" ON) # 是否打开日志，默认关掉日志
 

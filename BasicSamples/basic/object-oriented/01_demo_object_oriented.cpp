@@ -6,9 +6,6 @@
 
 using namespace std;
 
-/**
- * 下面是Class类Student类的声明
- */
 class Student {
 private:
     int stuID;
@@ -17,7 +14,11 @@ protected:
     int stuAge;
 public:
     Student() {
-        cout << "调用无惨构造函数" << endl;
+        cout << ">>>>>调用无惨构造函数" << endl;
+    }
+
+    ~Student() {
+        cout << "<<<<<<调用析构函数" << endl;
     }
 
     // 进行类的构造函数的声明，通过范围运算符在类的外面进行书写实现
@@ -29,7 +30,7 @@ public:
 };
 
 Student::Student(int id, float english, float math, float article) {
-    cout << "调用类的含参构造函数" << endl;
+    cout << ">>>>>调用类的含参构造函数" << endl;
     stuID = id;
     englishScore = english;
     mathScore = math;
@@ -48,6 +49,9 @@ void Student::show_data() {  //实现show_data函数
 }
 
 int main() {
+
+    // TODO 为什么普通对象的初始化，没有调用析构函数、
+    cout << "===================普通对象实例化=================" << endl;
     Student stu1;
     stu1.input_data();
     stu1.show_data();
@@ -57,7 +61,8 @@ int main() {
     Student *stuPtr = new Student();
     stuPtr->input_data();
     stuPtr->show_data();
-
+    // delete指针对象。可以让对象调用析构函数，就加快资源释放
+    // delete stuPtr;
 
     cout << "===================指针方式类的含参数构造函数实例化=================" << endl;
 
@@ -65,6 +70,19 @@ int main() {
     stuParamPtr->input_data();
     stuParamPtr->show_data();
 
+//    ===================普通对象实例化=================
+//    >>>>>调用无惨构造函数
+//    请输入您的成绩：1
+//    成绩是：1
+//        ===================指针方式类的实例化=================
+//    >>>>>调用无惨构造函数
+//    请输入您的成绩：3
+//    成绩是：3
+//        ===================指针方式类的含参数构造函数实例化=================
+//    >>>>>调用类的含参构造函数
+//    请输入您的成绩：4
+//    成绩是：4
+//    <<<<<<调用析构函数
     return 0;
 
 }
