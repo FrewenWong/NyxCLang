@@ -5,6 +5,7 @@
 //Map的使用
 //需要导入头文件
 #include <map> // STL头文件没有扩展名.h
+#include <iostream>
 
 //map 对象是一个模版类，需要关键字和存储对象两个模版参数
 //std::map<int, std::string> person; // 其实就是一个Key-Value键值对
@@ -60,6 +61,33 @@ int main() {
     std::map<int, int> map2;
     std::map<int, std::string> map3;
 
-    map1.insert(pair<int, std::string>(1, "map1Value1"));
-    map1.insert(std::map<int, std::string>::value_type(1, "Tom"));
+    // 1、通过Insert插入pair数据。需要引入iostream
+    map1.insert(std::pair<int, std::string>(1, "map1Value1"));
+    map1[3] = "map1Value3";
+    // 2、insert 函数插入 value_type 数据
+    map1.insert(std::map<int, std::string>::value_type(4, "map1Value4"));
+    // 3、用数组方式插入数据
+    map1[2] = "map1Value2";
+
+
+    // Map集合的遍历
+    // 我们创建两个迭代器对象。一个是前置迭代器、一个是后置迭代器
+    std::map<int, std::string>::iterator it;
+    std::map<int, std::string>::iterator itEnd;
+    it = map1.begin();
+    itEnd = map1.end();
+    while (it != itEnd) {
+        std::cout << "Map1(key,value) = Map(" << it->first << "," << it->second << ")" << std::endl;
+        it++;
+    }
+
+    // TODO C++的Map集合是有序的
+    // 2)反向迭代器
+    std::map<int, std::string>::reverse_iterator reverseIterator;
+    for (reverseIterator = map1.rbegin(); reverseIterator != map1.rend(); reverseIterator++) {
+        std::cout << "Map1(key,value) = Map(" << reverseIterator->first << "," << reverseIterator->second << ")"
+                  << std::endl;
+    }
+
+
 }

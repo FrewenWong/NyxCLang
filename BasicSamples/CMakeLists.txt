@@ -35,7 +35,7 @@ add_executable(HelloObjectOriented2 basic/object-oriented/15_function_obj_transf
 add_executable(HelloCLangDataStructure basic/data-structure/01_demo_map.cpp)
 
 # 学习C++的标准库函数
-add_executable(HelloCStdio stdio/01_demo_getenv.cpp)
+add_executable(HelloCStdio basic/stdio/01_demo_getenv.cpp)
 # 学习C++的标准库函数
 add_executable(HelloCStdio2 basic/name-space/01_demo_name_space.cpp)
 
@@ -45,3 +45,8 @@ add_executable(HelloCLangOther basic/other/01_demo_explicit.cpp)
 
 # 学习C++关于文档操作的File相关的Demo
 add_executable(HelloCLangFile basic/file/01_demo_file.cpp)
+
+#======================================================高级编程相关=====================================================
+# 学习智能指针相关的学习
+add_executable(HelloSmartPointer advanced/smart_pointer/01_smart_pointer_shared_ptr.cpp)
+add_executable(HelloSmartPointer2 advanced/smart_pointer/02_smart_pointer_shared_ptr_deleter.cpp)
